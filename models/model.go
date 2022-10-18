@@ -5,7 +5,7 @@ import (
 	"gin-auth/pkg/logging"
 	"gin-auth/pkg/setting"
 	_ "github.com/go-sql-driver/mysql"
-	"gorm.io/gorm"
+	"github.com/jinzhu/gorm"
 	"time"
 )
 
