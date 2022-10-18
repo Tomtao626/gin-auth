@@ -3,12 +3,12 @@ package userser
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/sun-wenming/gin-auth/models/users"
-	"github.com/sun-wenming/gin-auth/pkg/e"
-	"github.com/sun-wenming/gin-auth/pkg/gredis"
-	"github.com/sun-wenming/gin-auth/pkg/logging"
-	"github.com/sun-wenming/gin-auth/pkg/util"
-	"github.com/sun-wenming/gin-auth/service/caches"
+	"gin-auth/models/users"
+	"gin-auth/pkg/e"
+	"gin-auth/pkg/gredis"
+	"gin-auth/pkg/logging"
+	"gin-auth/pkg/util"
+	"gin-auth/service/caches"
 )
 
 // User 用户
@@ -82,7 +82,7 @@ func (u *User) PhoneRegister() util.Error {
 }
 
 // GetUserInfo 获取用户信息
-func (u *User) GetUserInfo() (*users.User,  util.Error) {
+func (u *User) GetUserInfo() (*users.User, util.Error) {
 	return users.GetUser(u.ID)
 
 }
@@ -129,7 +129,7 @@ func (u *User) getUserLoginInfo() (*users.UserLogin, util.Error) {
 	return user, nil
 }
 
-func existUserInfo(userID uint)  util.Error {
+func existUserInfo(userID uint) util.Error {
 	// 匹配成功  根据 userID 查询 用户信息
 	if !(userID > 0) {
 		return util.ErrNewCode(e.ErrorUserGetInfo)

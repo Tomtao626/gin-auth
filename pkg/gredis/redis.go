@@ -2,8 +2,8 @@ package gredis
 
 import (
 	"encoding/json"
+	"gin-auth/pkg/setting"
 	"github.com/gomodule/redigo/redis"
-	"github.com/sun-wenming/gin-auth/pkg/setting"
 	"time"
 )
 

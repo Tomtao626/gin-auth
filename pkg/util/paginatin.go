@@ -1,10 +1,10 @@
 package util
 
 import (
-	"github.com/sun-wenming/gin-auth/pkg/setting"
+	"gin-auth/pkg/setting"
 
-	"github.com/Unknwon/com"
 	"github.com/gin-gonic/gin"
+	"github.com/unknwon/com"
 )
 
 // GetPage 保证了各接口的page处理是一致的

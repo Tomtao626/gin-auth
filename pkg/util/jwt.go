@@ -2,13 +2,12 @@ package util
 
 import (
 	"errors"
+	"gin-auth/pkg/e"
+	"gin-auth/pkg/logging"
+	"gin-auth/pkg/setting"
+	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
-	"github.com/sun-wenming/gin-auth/pkg/e"
-	"github.com/sun-wenming/gin-auth/pkg/logging"
 	"time"
-
-	"github.com/dgrijalva/jwt-go"
-	"github.com/sun-wenming/gin-auth/pkg/setting"
 )
 
 var jwtSecret = []byte(setting.AppSetting.JwtSecret)

@@ -1,8 +1,8 @@
 package userser
 
 import (
-	"github.com/sun-wenming/gin-auth/models/users"
-	"github.com/sun-wenming/gin-auth/pkg/util"
+	"gin-auth/models/users"
+	"gin-auth/pkg/util"
 )
 
 // UserOauth UserOauth
@@ -17,7 +17,7 @@ type UserOauth struct {
 }
 
 // LoginGithub 注册认证登录
-func (o UserOauth) LoginGithub()  util.Error  {
+func (o UserOauth) LoginGithub() util.Error {
 	maps := make(map[string]interface{})
 
 	maps["oauth_id"] = o.OauthID

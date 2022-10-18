@@ -6,13 +6,13 @@ const (
 	ErrorInvalidParamsWithoutToken = 401
 	ErrorInvalidParams             = 400
 
-	// 认证
+	// ErrorAuthParseTokenFail 认证
 	ErrorAuthParseTokenFail = iota + 20001
 	ErrorAuthCheckTokenTimeout
 	ErrorAuthGenerateToken
 	ErrorAuthToken
 
-	// --- 客户端错误
+	// ErrorUserGetInfo --- 客户端错误
 	ErrorUserGetInfo = iota + 40001
 	ErrorUserGetLogin
 	ErrorUserRegName
@@ -28,7 +28,7 @@ const (
 	ErrorUserPwd
 	// --- end
 
-	// --- 服务器错误
+	// ErrorExecSql --- 服务器错误
 	ErrorExecSql = iota + 50001
 	ErrorPasswordEncrypt
 	ErrorUserInfoCreate
@@ -55,7 +55,7 @@ var MsgFlags = map[int]string{
 	// --- end
 
 	ErrorUserGetInfo:       "获取到用户失败.",
-	ErrorUserGetLogin:       "获取到帐户失败.",
+	ErrorUserGetLogin:      "获取到帐户失败.",
 	ErrorUserRegName:       "用户名输入格式错误.",
 	ErrorUserNameExist:     "用户名已存在.",
 	ErrorPhoneNotValid:     "手机号验证失败.",
@@ -74,7 +74,7 @@ var MsgFlags = map[int]string{
 	ErrorOauthState:      "三方登录状态码错误.",
 	ErrorOauthCode:       "三方登录获取token失败.",
 	ErrorOauthInfo:       "三方登录获取信息失败.",
-	ErrorUserName:       "获取用户名失败.",
+	ErrorUserName:        "获取用户名失败.",
 	// --- end
 }
 

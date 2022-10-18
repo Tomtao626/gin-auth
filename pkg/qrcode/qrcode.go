@@ -1,12 +1,12 @@
 package qrcode
 
 import (
-	"image/jpeg"
+	"gin-auth/pkg/file"
+	"gin-auth/pkg/setting"
+	"gin-auth/pkg/util"
 	"github.com/boombuler/barcode"
-	"github.com/sun-wenming/gin-auth/pkg/file"
-	"github.com/sun-wenming/gin-auth/pkg/util"
 	"github.com/boombuler/barcode/qr"
-	"github.com/sun-wenming/gin-auth/pkg/setting"
+	"image/jpeg"
 )
 
 const (
@@ -70,7 +70,7 @@ func (q *QrCode) Encode(path string) (string, string, error) {
 		if err != nil {
 			return "", "", err
 		}
-		
+
 		f, err := file.MustOpen(name, path)
 		if err != nil {
 			return "", "", err
@@ -87,7 +87,7 @@ func (q *QrCode) Encode(path string) (string, string, error) {
 }
 
 func GetQrCodeFullUrl(name string) string {
-	return setting.AppSetting.PrefixUrl +"/"+ GetQrCodePath() + name
+	return setting.AppSetting.PrefixUrl + "/" + GetQrCodePath() + name
 }
 
 func GetQrCodePath() string {
@@ -97,4 +97,3 @@ func GetQrCodePath() string {
 func GetQrCodeFullPath() string {
 	return setting.AppSetting.RuntimeRootPath + GetQrCodePath()
 }
-

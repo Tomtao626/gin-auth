@@ -1,10 +1,10 @@
 package jwt
 
 import (
+	"gin-auth/pkg/app"
+	"gin-auth/pkg/e"
+	"gin-auth/pkg/util"
 	"github.com/gin-gonic/gin"
-	"github.com/sun-wenming/gin-auth/pkg/app"
-	"github.com/sun-wenming/gin-auth/pkg/e"
-	"github.com/sun-wenming/gin-auth/pkg/util"
 	"net/http"
 	"time"
 )

@@ -1,7 +1,7 @@
 package export
 
 import (
-	"github.com/sun-wenming/gin-auth/pkg/setting"
+	"gin-auth/pkg/setting"
 )
 
 // GetExcelFullUrl 获取 访问 url

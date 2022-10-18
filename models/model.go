@@ -2,10 +2,10 @@ package models
 
 import (
 	"fmt"
-	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
-	"github.com/sun-wenming/gin-auth/pkg/logging"
-	"github.com/sun-wenming/gin-auth/pkg/setting"
+	"gin-auth/pkg/logging"
+	"gin-auth/pkg/setting"
+	_ "github.com/go-sql-driver/mysql"
+	"gorm.io/gorm"
 	"time"
 )
 
@@ -16,9 +16,9 @@ var (
 
 // Model 基类
 type Model struct {
-	ID         uint      `gorm:"primary_key" json:"id"`
-	CreatedAt  time.Time `json:"created_at"`
-	UpdatedAt  time.Time `json:"updated_at "`
+	ID        uint      `gorm:"primary_key" json:"id"`
+	CreatedAt time.Time `json:"created_at"`
+	UpdatedAt time.Time `json:"updated_at "`
 	// * 代表 null
 	DeletedAt *time.Time `json:"deleted_at"`
 }

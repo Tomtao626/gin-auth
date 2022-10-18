@@ -1,11 +1,11 @@
 package users
 
 import (
+	"gin-auth/models"
+	"gin-auth/pkg/e"
+	"gin-auth/pkg/logging"
+	"gin-auth/pkg/util"
 	"github.com/jinzhu/gorm"
-	"github.com/sun-wenming/gin-auth/models"
-	"github.com/sun-wenming/gin-auth/pkg/e"
-	"github.com/sun-wenming/gin-auth/pkg/logging"
-	"github.com/sun-wenming/gin-auth/pkg/util"
 )
 
 // UserLogin 用户密码登陆认证

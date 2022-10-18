@@ -2,10 +2,10 @@ package users
 
 import (
 	"fmt"
-	"github.com/sun-wenming/gin-auth/models"
-	"github.com/sun-wenming/gin-auth/pkg/e"
-	"github.com/sun-wenming/gin-auth/pkg/logging"
-	"github.com/sun-wenming/gin-auth/pkg/util"
+	"gin-auth/models"
+	"gin-auth/pkg/e"
+	"gin-auth/pkg/logging"
+	"gin-auth/pkg/util"
 
 	"github.com/jinzhu/gorm"
 )

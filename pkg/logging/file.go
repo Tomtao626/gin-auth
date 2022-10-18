@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/sun-wenming/gin-auth/pkg/setting"
+	"gin-auth/pkg/setting"
 )
 
 var (

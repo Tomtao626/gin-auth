@@ -1,12 +1,12 @@
 package api
 
 import (
+	"gin-auth/pkg/app"
+	"gin-auth/pkg/e"
+	"gin-auth/pkg/logging"
+	"gin-auth/pkg/util"
+	"gin-auth/service/userser"
 	"github.com/gin-gonic/gin"
-	"github.com/sun-wenming/gin-auth/pkg/app"
-	"github.com/sun-wenming/gin-auth/pkg/e"
-	"github.com/sun-wenming/gin-auth/pkg/logging"
-	"github.com/sun-wenming/gin-auth/pkg/util"
-	"github.com/sun-wenming/gin-auth/service/userser"
 )
 
 type auth struct {

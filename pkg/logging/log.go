@@ -1,9 +1,9 @@
 package logging
 
 import (
+	"gin-auth/pkg/file"
+	"gin-auth/pkg/setting"
 	"github.com/sirupsen/logrus"
-	"github.com/sun-wenming/gin-auth/pkg/file"
-	"github.com/sun-wenming/gin-auth/pkg/setting"
 	"os"
 )
 

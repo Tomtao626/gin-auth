@@ -1,11 +1,11 @@
 package util
 
 import (
+	"gin-auth/pkg/logging"
 	"github.com/go-playground/locales/zh"
-	"github.com/go-playground/universal-translator"
-	"github.com/sun-wenming/gin-auth/pkg/logging"
-	"gopkg.in/go-playground/validator.v9"
-	zh_translations "gopkg.in/go-playground/validator.v9/translations/zh"
+	ut "github.com/go-playground/universal-translator"
+	"github.com/go-playground/validator/v10"
+	zh_trans "github.com/go-playground/validator/v10/translations/zh"
 	"reflect"
 	"strings"
 	"sync"
@@ -37,12 +37,14 @@ func GetValidate() *validator.Validate {
 			return "{{" + name + "}}"
 		})
 
-		zh_translations.RegisterDefaultTranslations(validate, trans)
+		err := zh_trans.RegisterDefaultTranslations(validate, trans)
+		if err != nil {
+			return
+		}
 
 	})
 	return validate
 }
-
 
 // GetTrans 获取翻译
 func GetTrans() ut.Translator {
@@ -58,7 +60,6 @@ func ValidEmail(email string) bool {
 	// output: Key: "" Error:Field validation for "" failed on the "email" tag
 	return true
 }
-
 
 // 自定义字段名称
 // 参考自 : https://github.com/syssam/go-playground-sample/blob/master/main.go

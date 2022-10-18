@@ -5,8 +5,8 @@ import (
 	"crypto/cipher"
 	"crypto/rand"
 	"errors"
-	"github.com/sun-wenming/gin-auth/pkg/e"
-	"github.com/sun-wenming/gin-auth/pkg/logging"
+	"gin-auth/pkg/e"
+	"gin-auth/pkg/logging"
 	"golang.org/x/crypto/bcrypt"
 	"io"
 )
