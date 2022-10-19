@@ -13,7 +13,7 @@ BINARY_UNIX=$(BINARY_NAME)_unix
 all: build run
 
 build:
-	swag init
+	#swag init
 	$(GOBUILD) -v .
 
 pull:

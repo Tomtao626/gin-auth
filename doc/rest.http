@@ -1,0 +1,9 @@
+### 注册
+POST http://localhost:8000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "1qazxsw2"
+}
