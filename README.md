@@ -51,4 +51,4 @@
 ### 参考
 
 1. 整体架构入门参考于 [go-gin-example](https://github.com/EDDYCJY/go-gin-example/blob/master/README_ZH.md)
-2. 建表参考于 [廖老师的文章](https://www.liaoxuefeng.com/article/001437480923144e567335658cc4015b38a595bb006aa51000)
+2. 建表参考于 [廖雪峰的文章](https://www.liaoxuefeng.com/article/001437480923144e567335658cc4015b38a595bb006aa51000)
