@@ -1,8 +1,10 @@
 package app
 
 import (
+	"gin-auth/pkg/e"
 	"gin-auth/pkg/util"
 	"github.com/gin-gonic/gin"
+	"github.com/go-playground/validator/v10"
 	"net/http"
 	"strconv"
 	"strings"
